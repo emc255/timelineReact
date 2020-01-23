@@ -11,7 +11,7 @@ body {
 
 .header {
   height: 10vh;
-  background-color: #1c9ad9;
+  background-color: #26b0d7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,82 +22,119 @@ h1 {
   color: #ffffff;
 }
 
-form {
-  margin: 10px auto;
-  border: 2px solid black;
+.form-container {
   width: 90%;
+  margin: 10px auto;
+  border: 2px solid #d1dced;
 }
 
 select {
-  width: 80px;
-  height: 25px;
-  margin-right: 10px;
+  height: 30px;
+  padding-left: 10px;
 }
 
-.user-text {
-  width: 90%;
-  height: 27px;
-  margin-right: 10px;
+.user-input-post {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
 }
 
-.user-date {
-  height: 25px;
-  margin-right: 10px;
+.post-btn-container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-button {
-  height: 25px;
-  width: 60px;
-  cursor: pointer;
-}
-
+.post-btn,
 .delete-btn {
-  width: 90px;
-}
-
-.user-container {
-  width: 90%;
-}
-
-.post-container {
-  margin: 10px auto;
-}
-
-.post-btn {
-  background-color: #2b53ba;
+  background-color: #107ad8;
   color: #ffffff;
   outline: none;
   cursor: pointer;
   border-radius: 4px;
   border: none;
+  margin-right: 20px;
+  width: 80px;
+  height: 20px;
 }
 
 .message-container {
   width: 90%;
-  text-align: center;
   display: flex;
-  margin: 10px auto;
-  justify-content: space-between;
-  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
-.user-message-container {
-  display: flex;
-  margin: 10px 0;
-  justify-content: space-evenly;
+.user-photo {
+  position: relative;
 }
 
 .user-photo img {
-  width: 50;
-  max-height: 60px;
-  border-radius: 50%;
+  width: 70;
+  height: 70px;
 }
 
-.user-massage {
-  margin: 10px 0;
+.message-content-container {
+  width: 90%;
+  padding-left: 20px;
+  position: relative;
 }
 
 .line {
   display: inline;
-  margin-left: 15px;
+}
+
+.date {
+  margin-left: 20px;
+  margin-right: 6px;
+}
+
+.date,
+span,
+.time {
+  font-weight: 700;
+}
+
+.time {
+  margin-left: 6px;
+}
+
+.speech-bubble {
+  width: 450px;
+  height: 50px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #efefef;
+  top: 38%;
+  left: 7%;
+}
+
+.speech-bubble:before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: -10%;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #efefef;
+  border-bottom: 13px solid transparent;
+  margin: 13px 0 0 -25px;
+}
+
+.speech-bubble p {
+  padding-left: 12px;
+}
+
+.delete-btn-container {
+  text-align: right;
+  position: absolute;
+  top: 37px;
+  right: 0;
+}
+
+.delete-btn {
+  width: 90px;
 }

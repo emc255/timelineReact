@@ -3,24 +3,28 @@ import React from "react";
 function MessageBox(props) {
   if (props.message.length > 0) {
     return (
-      <div>
+      <div className="aa">
         {props.message.map((ele, index) => (
-          <div className="message-container" key={index}>
-            <div className="user-message-container">
+          <div key={index}>
+            <div className="message-container">
               <div className="user-photo">
                 <img src={ele.photo} alt="kitty" />
               </div>
-              <div className="user-massage">
-                <p className="line">{ele.name}</p>
-                <p className="line">{ele.date}</p>
-                <p className="line">{ele.time}</p>
-
-                <p>{ele.message}</p>
+              <div className="message-content-container">
+                <p className="line user-name">{ele.name}</p>
+                <p className="line date">{ele.date}</p>
+                <span>@</span>
+                <p className="line time">{ele.time}</p>
+                <div className="speech-bubble">
+                  <p>{ele.message}</p>
+                </div>
+                <div className="delete-btn-container">
+                  <button className="delete-btn" data-id={index} onClick={e => props.delete(e.target.dataset.id)}>
+                    delete post
+                  </button>
+                </div>
               </div>
             </div>
-            <button className="delete-btn" data-id={index} onClick={e => props.delete(e.target.dataset.id)}>
-              delete post
-            </button>
           </div>
         ))}
       </div>

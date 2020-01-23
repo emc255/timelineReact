@@ -29,7 +29,7 @@ function InputMessage(props) {
   return (
     <div className="form-container">
       <form onSubmit={submit}>
-        <div className="user-container">
+        <div className="choose-user-container">
           <select onChange={getIndex}>
             {props.user.map(ele => (
               <option key={ele.index} value={ele.index}>
@@ -38,8 +38,14 @@ function InputMessage(props) {
             ))}
           </select>
         </div>
-        <div className="post-container">
-          <input className="user-text" type="text" value={value} placeholder="message...." onChange={e => setValue(e.target.value)} />
+        <input
+          className="user-input-post"
+          type="text"
+          value={value}
+          placeholder="message goes here..."
+          onChange={e => setValue(e.target.value)}
+        />
+        <div className="post-btn-container">
           <button className="post-btn">post</button>
         </div>
       </form>
