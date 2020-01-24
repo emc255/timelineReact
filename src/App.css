@@ -60,26 +60,31 @@ select {
   height: 20px;
 }
 
-.message-container {
+.outer-message-container {
   width: 90%;
-  display: flex;
+  height: 120px;
   margin: auto;
-  margin-bottom: 20px;
+  position: relative;
 }
 
-.user-photo {
-  position: relative;
+.message-container {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .user-photo img {
   width: 70;
   height: 70px;
+  position: absolute;
+  top: 29%;
+  left: 0%;
 }
 
 .message-content-container {
-  width: 90%;
-  padding-left: 20px;
-  position: relative;
+  position: absolute;
+  width: 60%;
+  left: 15%;
+  top: 6%;
 }
 
 .line {
@@ -107,8 +112,13 @@ span,
   position: absolute;
   border-radius: 10px;
   background-color: #efefef;
-  top: 38%;
-  left: 7%;
+  top: 39%;
+  left: 13%;
+}
+
+.speech-bubble p {
+  text-overflow: ellipsis;
+  width: 450px;
 }
 
 .speech-bubble:before {
@@ -128,13 +138,9 @@ span,
   padding-left: 12px;
 }
 
-.delete-btn-container {
-  text-align: right;
-  position: absolute;
-  top: 37px;
-  right: 0;
-}
-
 .delete-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
   width: 90px;
 }

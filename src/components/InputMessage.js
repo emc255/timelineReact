@@ -4,7 +4,7 @@ function InputMessage(props) {
   const [value, setValue] = useState("");
   const [username, setUserName] = useState(0);
 
-  function submit(e) {
+  const submit = e => {
     e.preventDefault();
 
     const timestamp = new Date();
@@ -16,15 +16,15 @@ function InputMessage(props) {
 
       setValue("");
     }
-  }
+  };
 
-  function getIndex(e) {
+  const getIndex = e => {
     if (!e.target.value) {
       setUserName(0);
     } else {
       setUserName(e.target.value);
     }
-  }
+  };
 
   return (
     <div className="form-container">
@@ -32,7 +32,7 @@ function InputMessage(props) {
         <div className="choose-user-container">
           <select onChange={getIndex}>
             {props.user.map(ele => (
-              <option key={ele.index} value={ele.index}>
+              <option key={ele.id} value={ele.id}>
                 {ele.name}
               </option>
             ))}

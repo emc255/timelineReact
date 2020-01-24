@@ -6,22 +6,22 @@ import "./App.css";
 
 function App() {
   const [user, setUser] = useState([
-    { index: 0, name: "euhna", photo: "http://placekitten.com/g/101/100" },
-    { index: 1, name: "sana", photo: "http://placekitten.com/g/102/100" },
-    { index: 2, name: "sinb", photo: "http://placekitten.com/g/103/100" },
-    { index: 3, name: "yerin", photo: "http://placekitten.com/g/104/100" },
-    { index: 4, name: "nayeon", photo: "http://placekitten.com/g/105/100?" }
+    { id: 0, name: "euhna", photo: "http://placekitten.com/g/101/100" },
+    { id: 1, name: "sana", photo: "http://placekitten.com/g/102/100" },
+    { id: 2, name: "sinb", photo: "http://placekitten.com/g/103/100" },
+    { id: 3, name: "yerin", photo: "http://placekitten.com/g/104/100" },
+    { id: 4, name: "nayeon", photo: "http://placekitten.com/g/105/100?" }
   ]);
 
   const [post, setPost] = useState([]);
 
-  function addMessage(input, index, time, date) {
+  const addMessage = (input, index, time, date) => {
     let newPost = {};
 
     user.map(ele => {
-      if (ele.index === parseInt(index)) {
+      if (ele.id === parseInt(index)) {
         newPost = {
-          index: ele.index,
+          index: ele.id,
           name: ele.name,
           photo: ele.photo,
           message: input,
@@ -35,7 +35,7 @@ function App() {
     let newMessage = [newPost, ...post];
 
     setPost(newMessage);
-  }
+  };
 
   const deletePost = index2 => {
     let newMessage = [...post];
