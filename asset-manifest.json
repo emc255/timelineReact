@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/timelineReact/static/css/main.2e3d3732.chunk.css",
+    "main.js": "/timelineReact/static/js/main.f1e3567b.chunk.js",
+    "main.js.map": "/timelineReact/static/js/main.f1e3567b.chunk.js.map",
+    "runtime-main.js": "/timelineReact/static/js/runtime-main.ef3a8fbf.js",
+    "runtime-main.js.map": "/timelineReact/static/js/runtime-main.ef3a8fbf.js.map",
+    "static/js/2.ac181969.chunk.js": "/timelineReact/static/js/2.ac181969.chunk.js",
+    "static/js/2.ac181969.chunk.js.map": "/timelineReact/static/js/2.ac181969.chunk.js.map",
+    "index.html": "/timelineReact/index.html",
+    "precache-manifest.bed1a22f102bde24b0e62da074736c92.js": "/timelineReact/precache-manifest.bed1a22f102bde24b0e62da074736c92.js",
+    "service-worker.js": "/timelineReact/service-worker.js",
+    "static/css/main.2e3d3732.chunk.css.map": "/timelineReact/static/css/main.2e3d3732.chunk.css.map",
+    "static/js/2.ac181969.chunk.js.LICENSE": "/timelineReact/static/js/2.ac181969.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef3a8fbf.js",
+    "static/js/2.ac181969.chunk.js",
+    "static/css/main.2e3d3732.chunk.css",
+    "static/js/main.f1e3567b.chunk.js"
+  ]
+}
